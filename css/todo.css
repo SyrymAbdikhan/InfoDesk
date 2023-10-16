@@ -1,0 +1,36 @@
+
+#todo > article {
+  padding: var(--pico-block-spacing-horizontal);
+}
+
+#todo .todo-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#todo .todo-items .todo-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  justify-items: center;
+  align-items: start;
+}
+
+#todo .todo-items .todo-item input {
+  margin: 0;
+  margin-top: 0.15rem;
+}
+
+#todo .todo-items .todo-item label {
+  width: 100%;
+}
+
+#todo .todo-items .todo-item button {
+  padding: 0.3rem;
+  background-color: #f66;
+  line-height: 0.7;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}

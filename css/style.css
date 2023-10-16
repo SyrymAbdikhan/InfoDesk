@@ -1,14 +1,4 @@
 
-:root {
-  --radius-md: 1rem;
-  --spacing: 1rem;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 4rem;
-}
-
 .grid {
   margin-right: auto;
   margin-left: auto;
@@ -16,12 +6,12 @@ html {
 
 img {
   display: block;
-  border-radius: var(--radius-md);
-  margin-bottom: var(--spacing);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
 }
 
 header > article {
-  padding: var(--pico-spacing) var(--pico-block-spacing-horizontal);
+  padding: var(--pico-block-spacing-horizontal);
 }
 
 body > main {
@@ -29,54 +19,6 @@ body > main {
   grid-template-columns: auto 1fr;
   column-gap: 4rem;
   row-gap: 2rem;
-}
-
-body > main > aside {
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 10000;
-  width: 100%;
-  max-width: 10rem;
-  height: fit-content;
-  top: 7rem;
-  background-color: var(--pico-background-color);
-}
-
-aside > .container {
-  top: 7rem;
-  background-color: var(--pico-background-color);
-}
-
-aside .nav-content {
-  display: grid;
-  row-gap: 1rem;
-}
-
-aside > .hamburger {
-  position: relative;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  border: 0;
-  background: transparent;
-  border-radius: 0;
-  height: 60px;
-  width: 30px;
-  cursor: pointer;
-  margin-left: 25px;
-}
-.icon-bar {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: #aaa;
-  transition: .3s;
-}
-.icon-bar + .icon-bar {
-  margin-top: 5px;
-}
-aside:focus-within > .container {
-  display: block;
 }
 
 html[data-theme="dark"] .outline {
@@ -92,13 +34,18 @@ html[data-theme="light"] .outline {
   margin: 0 auto;
 }
 
+input:checked + label {
+  text-decoration: line-through;
+  color: var(--pico-secondary);
+}
+
 section details, section section ~ hr, section details ~ hr {
   width: 94%;
   margin-left: auto;
   margin-right: auto;
 }
 
-#electromagnetics [role="group"] {
+.stretch, #electromagnetics [role="group"] {
   width: 100%;
 }
 
@@ -110,27 +57,6 @@ section details, section section ~ hr, section details ~ hr {
   body>main {
     grid-template-columns: 1fr;
   }
-
-  body > main > aside {
-    max-width: 100vw;
-    border-bottom: 1px solid var(--pico-muted-border-color);
-    top: 0;
-  }
-
-  body > main > aside > .container {
-    display: none;
-    position: fixed;
-    height: 100vh;
-    z-index: 10000;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    padding-top: 4rem;
-  }
-
-  aside > .hamburger {
-    display: flex;
-  }
 }
 
 @media (max-width: 768px) {
@@ -140,17 +66,6 @@ section details, section section ~ hr, section details ~ hr {
 }
 
 @media (max-width: 576px) {
-  aside>div {
-    text-align: center;
-  }
-
-  aside .nav-content {
-    row-gap: 1.5rem;
-  }
-  aside .nav-content:last-child {
-    margin-bottom: 1.5rem;
-  }
-
   .smaller {
     width: 100%;
   }

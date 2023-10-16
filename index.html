@@ -7,6 +7,8 @@
   <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@next/css/pico.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/todo.css">
 </head>
 <body>
   <header class="container grid">
@@ -36,6 +38,7 @@
         <h3>Content</h3>
         <hr>
         <div class="nav-content">
+          <a href="#todo" class="contrast">To Do</a>
           <a href="#general-info" class="contrast">General Info</a>
           <a href="#electromagnetics" class="contrast">Electromagnetics</a>
           <a href="#psychology" class="contrast">Psychology</a>
@@ -54,6 +57,18 @@
     </aside>
 
     <div class="content">
+      <section class="smaller" id="todo">
+        <article>
+          <h3>To Do</h3>
+          <div class="stretch" role="group">
+            <input type="text" placeholder="Ex.: Embedded Assignment 4" id="todo-new-item"/>
+            <button onClick="createItem();">Add</button>
+          </div>
+          <hr>
+          <div class="todo-items"></div>
+        </article>
+      </section>
+
       <section id="general-info">
         <h1>General Information</h1>
         <section>
@@ -204,80 +219,80 @@
               <small>– 09.10</small><br>
               <div role="group">
                 <input type="text" value="https://astanait-my.sharepoint.com/:v:/g/personal/213005_astanait_edu_kz/EWQaqVX2FG5JkAvaZjM2AWQBpJNpWhjiBVr8c1KbnamwHA" readonly/>
-                <button onClick="openLink(this); return false;" class="contrast">open</button>
-                <button onClick="copyLink(this); return false;">copy</button>
+                <button onClick="openLink(this);" class="contrast">open</button>
+                <button onClick="copyLink(this);">copy</button>
               </div>
             </label>
             <label>
               <small>– 02.10</small><br>
               <div role="group">
                 <input type="text" value="https://astanait-my.sharepoint.com/:v:/g/personal/213048_astanait_edu_kz/ERpJ4HPXeGZBmGmTZSGSHK8BsbQ0VXGSXIbJWHUxTGlgAg" readonly/>
-                <button onClick="openLink(this); return false;" class="contrast">open</button>
-                <button onClick="copyLink(this); return false;">copy</button>
+                <button onClick="openLink(this);" class="contrast">open</button>
+                <button onClick="copyLink(this);">copy</button>
               </div>
             </label>
             <label>
               <small>– 27.09</small><br>
               <div role="group">
                 <input type="text" value="https://astanait-my.sharepoint.com/:v:/g/personal/213048_astanait_edu_kz/ERIgFudjrFxEprchhzVmvzQB-j9wf108u8KOQHdd2X4WSw" readonly/>
-                <button onClick="openLink(this); return false;" class="contrast">open</button>
-                <button onClick="copyLink(this); return false;">copy</button>
+                <button onClick="openLink(this);" class="contrast">open</button>
+                <button onClick="copyLink(this);">copy</button>
               </div>
             </label>
             <label>
               <small>– 25.09</small><br>
               <div role="group">
                 <input type="text" value="https://astanait-my.sharepoint.com/:v:/g/personal/213048_astanait_edu_kz/EfaO7lYRgy5PgB4cUohkVKYB4U4Q0FVGvqseGT3ZQ9M02A" readonly/>
-                <button onClick="openLink(this); return false;" class="contrast">open</button>
-                <button onClick="copyLink(this); return false;">copy</button>
+                <button onClick="openLink(this);" class="contrast">open</button>
+                <button onClick="copyLink(this);">copy</button>
               </div>
             </label>
             <label>
               <small>– 20.09</small><br>
               <div role="group">
                 <input type="text" value="https://astanait-my.sharepoint.com/:v:/g/personal/213005_astanait_edu_kz/EYezpa8Jfs5MgYUAOe_YsHEBetkIu94Bn84JlqFx3dm9ww" readonly/>
-                <button onClick="openLink(this); return false;" class="contrast">open</button>
-                <button onClick="copyLink(this); return false;">copy</button>
+                <button onClick="openLink(this);" class="contrast">open</button>
+                <button onClick="copyLink(this);">copy</button>
               </div>
             </label>
             <label>
               <small>– 18.09</small><br>
               <div role="group">
                 <input type="text" value="https://astanait-my.sharepoint.com/:v:/g/personal/213022_astanait_edu_kz/EV9bphPdqaBHoCR08qltYlIB8axldXThHBYgtI-JE-XdKw" readonly/>
-                <button onClick="openLink(this); return false;" class="contrast">open</button>
-                <button onClick="copyLink(this); return false;">copy</button>
+                <button onClick="openLink(this);" class="contrast">open</button>
+                <button onClick="copyLink(this);">copy</button>
               </div>
             </label>
             <label>
               <small>– 13.09</small><br>
               <div role="group">
                 <input type="text" value="https://astanait-my.sharepoint.com/:v:/g/personal/213022_astanait_edu_kz/EY-zXVazplRHrtmFjBulxp0BVJlmDSJUvxXlZmYgLFaBUw" readonly/>
-                <button onClick="openLink(this); return false;" class="contrast">open</button>
-                <button onClick="copyLink(this); return false;">copy</button>
+                <button onClick="openLink(this);" class="contrast">open</button>
+                <button onClick="copyLink(this);">copy</button>
               </div>
             </label>
             <label>
               <small>– 11.09</small><br>
               <div role="group">
                 <input type="text" value="https://astanait-my.sharepoint.com/:v:/g/personal/213013_astanait_edu_kz/EU3JoKzDzYZHhO646duK1IQB8TJTXv0-sAhQ6ka-4TBIKQ" readonly/>
-                <button onClick="openLink(this); return false;" class="contrast">open</button>
-                <button onClick="copyLink(this); return false;">copy</button>
+                <button onClick="openLink(this);" class="contrast">open</button>
+                <button onClick="copyLink(this);">copy</button>
               </div>
             </label>
             <label>
               <small>– 06.09</small><br>
               <div role="group">
                 <input type="text" value="https://astanait-my.sharepoint.com/:v:/g/personal/203064_astanait_edu_kz/Edn0DyeTya9PukDuV2AP7D4B-vyY_KgBqlAHYrt5yZtDIA" readonly/>
-                <button onClick="openLink(this); return false;" class="contrast">open</button>
-                <button onClick="copyLink(this); return false;">copy</button>
+                <button onClick="openLink(this);" class="contrast">open</button>
+                <button onClick="copyLink(this);">copy</button>
               </div>
             </label>
             <label>
               <small>– 04.09</small><br>
               <div role="group">
                 <input type="text" value="https://astanait-my.sharepoint.com/:v:/g/personal/213013_astanait_edu_kz/EfQabuhHdKhDkiNBAlD9zgYBQFEhQTx8JiCm76yJEH9W0Q" readonly/>
-                <button onClick="openLink(this); return false;" class="contrast">open</button>
-                <button onClick="copyLink(this); return false;">copy</button>
+                <button onClick="openLink(this);" class="contrast">open</button>
+                <button onClick="copyLink(this);">copy</button>
               </div>
             </label>
           </div>
@@ -309,7 +324,9 @@
       </a>
     </small>
   </footer>
+
   <script src="js/theme-switcher.js"></script>
   <script src="js/forAction.js"></script>
+  <script src="js/todo.js"></script>
 </body>
 </html>
